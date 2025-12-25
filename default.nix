@@ -1,4 +1,4 @@
-{ mkDerivation, base, bytestring, extensible-exceptions
+{ mkDerivation, base, bytestring
 , happstack-server, hslogger, HsOpenSSL, network, openssl, sendfile
 , stdenv, time, unix
 }:
@@ -7,7 +7,7 @@ mkDerivation {
   version = "7.1.6";
   src = ./.;
   libraryHaskellDepends = [
-    base bytestring extensible-exceptions happstack-server hslogger
+    base bytestring happstack-server hslogger
     HsOpenSSL network sendfile time unix
   ];
   librarySystemDepends = [ openssl ];

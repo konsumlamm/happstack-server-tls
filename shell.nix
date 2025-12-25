@@ -4,7 +4,7 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, bytestring, extensible-exceptions
+  f = { mkDerivation, base, bytestring
       , happstack-server, hslogger, HsOpenSSL, network, openssl, sendfile
       , stdenv, time, unix, cabal-install
       }:
@@ -13,7 +13,7 @@ let
         version = "7.1.6";
         src = ./.;
         libraryHaskellDepends = [
-          base bytestring extensible-exceptions happstack-server hslogger
+          base bytestring happstack-server hslogger
           HsOpenSSL network sendfile time unix
         ];
         librarySystemDepends = [ openssl ];

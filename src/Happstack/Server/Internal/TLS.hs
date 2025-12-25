@@ -4,7 +4,7 @@
 module Happstack.Server.Internal.TLS where
 
 import Control.Concurrent                         (forkIO, killThread, myThreadId)
-import Control.Exception.Extensible               as E
+import Control.Exception                          as E
 import Control.Monad                              (forever, when)
 import Data.Time                                  (UTCTime)
 import GHC.IO.Exception                           (IOErrorType(..))
